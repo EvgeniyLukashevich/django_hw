@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}ORDERS{% endblock %}
+
+{% block content %}
+<section class="center">
+    <h2>Список заказов {{ order.customer.name }}:</h2><br>
+    {% for order in orders %}
+    <article>
+        <h3>Заказ: #{{ order.pk }}</h3>
+        <h4>Дата заказа: {{ order.date_ordered }}</h4>
+        <h4>Товары:</h4>
+        <ul>
+            {% for order_item in order.order_items.all %}
+            <li>{{ order_item.product.name }} - Цена: {{ order_item.product.price }} - Количество: {{ order_item.quantity }}</li>
+            {% endfor %}
+        </ul>
+        <h4>Итоговая сумма: {{ order.total_price }}</h4>
+        <br>
+    </article>
+    {% endfor %}
+</section>
+{% endblock %}

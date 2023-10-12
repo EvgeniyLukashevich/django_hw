@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}CUSTOMERS{% endblock %}
+
+{% block content %}
+<section class="center">
+    <h2>Список пользователей:</h2><br>
+    {% for customer in customers %}
+    <article>
+        <h3>#{{ customer.pk }} {{ customer.name }}</h3>
+        <h4>Age: {{ customer.age }}</h4>
+        <h4>E-mail: {{ customer.email }}</h4>
+        <a href="{% url 'week_order' customer.pk %}">Заказы за неделю</a>
+        <br>
+    </article>
+    {% endfor %}
+</section>
+
+{% endblock %}
