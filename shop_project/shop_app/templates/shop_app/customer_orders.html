@@ -4,7 +4,7 @@
 
 {% block content %}
 <section class="center">
-    <h2>Список заказов :</h2><br>
+    <h2>Список заказов :</h2><br><br>
     {% for order in orders %}
     <h5>{{ order.client.name }}</h5>
     <article>
@@ -16,6 +16,8 @@
             {% endfor %}
         </ul>
         <h4>Итоговая сумма: {{ order.total_price }}</h4>
+        <br><br>
+        # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
         <br><br>
     </article>
     {% endfor %}
