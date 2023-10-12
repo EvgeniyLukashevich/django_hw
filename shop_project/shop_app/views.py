@@ -15,4 +15,4 @@ def week_orders(request, customer_id):
     now = timezone.now()
     one_week_ago = now - timezone.timedelta(days=7)
     orders = Order.objects.filter(date_ordered__gte=one_week_ago, client=customer_id)
-    return render(request, 'customer_orders.html', {'orders': orders})
+    return render(request, 'shop_app/customer_orders.html', {'orders': orders})

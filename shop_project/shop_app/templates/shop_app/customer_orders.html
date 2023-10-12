@@ -4,11 +4,11 @@
 
 {% block content %}
 <section class="center">
-    <h2>Список заказов {{ order.customer.name }}:</h2><br>
+    <h2>Список заказов :</h2><br>
     {% for order in orders %}
+    <h5>{{ order.client.name }}</h5>
     <article>
-        <h3>Заказ: #{{ order.pk }}</h3>
-        <h4>Дата заказа: {{ order.date_ordered }}</h4>
+        <h3>Заказ #{{ order.pk }} от {{ order.date_ordered }}</h3><br>
         <h4>Товары:</h4>
         <ul>
             {% for order_item in order.order_items.all %}
@@ -16,7 +16,7 @@
             {% endfor %}
         </ul>
         <h4>Итоговая сумма: {{ order.total_price }}</h4>
-        <br>
+        <br><br>
     </article>
     {% endfor %}
 </section>
