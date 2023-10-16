@@ -25,8 +25,18 @@ def month_orders(request, customer_id):
     orders = Order.objects.filter(date_ordered__gte=one_month_ago, client=customer_id)
     return render(request, 'shop_app/customer_orders.html', {'orders': orders})
 
+
 def year_orders(request, customer_id):
     now = timezone.now()
     one_year_ago = now - timezone.timedelta(days=365)
     orders = Order.objects.filter(date_ordered__gte=one_year_ago, client=customer_id)
     return render(request, 'shop_app/customer_orders.html', {'orders': orders})
+
+
+def show_products(request):
+    products_list = Product.objects.all()
+    return render(request, 'shop_app/homework4.html', {'products': products_list})
+
+
+def add_image(request, product_id):
+    pass

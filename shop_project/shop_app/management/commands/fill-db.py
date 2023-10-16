@@ -54,8 +54,8 @@ class Command(BaseCommand):
             product = Product(
                 name=f'{choice(product_first_word)} {choice(product_second_word)}',
                 description=f'Long description #{i}',
-                price=uniform(100, 10000),
-                stock=randint(10, 100)
+                price=uniform(100, 9999),
+                stock=randint(500, 999)
             )
             product.save()
         for i in range(1, Customer.objects.count() + 1):
