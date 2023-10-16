@@ -4,16 +4,15 @@
 
 {% block content %}
 <section class="center">
-    <h2>Список товаров:</h2><br>
+    <h2>Список товаров:</h2><br><br>
     {% for product in products %}
     <article>
         <h3>#{{ product.pk }} {{ product.name }}</h3>
         <img src="{{ product.img.url }}" alt="{{ product.name }} image">
-        <h1>{{ product.img }}</h1>
-        <h4>Цена: {{ product.price }}</h4>
-        <h4>Запас: {{ product.stock }}</h4>
+        <h4>Цена: {{ product.price }} рублей</h4>
+        <h4>Запас: {{ product.stock }} шт</h4>
         <h4>Описание: {{ product.description }}</h4>
-        <a href="{% url 'add_image' product.pk %}">Сменить/загрузить изображение</a><br>
+        <a href="{% url 'add_image' product.pk %}">Сменить/загрузить изображение</a><br><br>
         <br>
     </article>
     {% endfor %}
