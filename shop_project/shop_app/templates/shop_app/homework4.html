@@ -8,7 +8,8 @@
     {% for product in products %}
     <article>
         <h3>#{{ product.pk }} {{ product.name }}</h3>
-        <img src="{{ product.image.url }}" alt="{{ product.name }} image">
+        <img src="{{ product.img.url }}" alt="{{ product.name }} image">
+        <h1>{{ product.img }}</h1>
         <h4>Цена: {{ product.price }}</h4>
         <h4>Запас: {{ product.stock }}</h4>
         <h4>Описание: {{ product.description }}</h4>

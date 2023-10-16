@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from .models import Customer, Product, Order, OrderItem
+from .forms import ImageForm
 from django.utils import timezone
+from django.core.files.storage import FileSystemStorage
 
 
 def index(request):
@@ -39,4 +41,16 @@ def show_products(request):
 
 
 def add_image(request, product_id):
-    pass
+    product = Order.objects.filter(pk=product_id)
+    if request.method == 'POST':
+        form = ImageForm(request.POST, request.FILES)
+        if form.is_valid():
+            image = form.cleaned_data['image']
+            fs = FileSystemStorage()
+            fs.save(image.name, image)
+            product = Product.objects.filter(pk=product_id).first()
+            product.img = image.name
+            product.save()
+    else:
+        form = ImageForm()
+    return render(request, 'shop_app/add_image_form.html', {'form': form})

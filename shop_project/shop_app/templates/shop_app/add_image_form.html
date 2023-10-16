@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}ADD IMAGE{% endblock %}
+
+{% block content %}
+<section class="center">
+    <h2>Загрузите изображение</h2><br>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">ЗАГРУЗИТЬ</button>
+        </form>
+</section>
+
+{% endblock %}
