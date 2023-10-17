@@ -2,9 +2,10 @@
 
 {% block title %}ADD IMAGE{% endblock %}
 
+{% block title2 %}ЗАГРУЗИТЕ ИЗОБРАЖЕНИЕ{% endblock %}
+
 {% block content %}
 <section class="center">
-    <h2>Загрузите изображение</h2><br>
         <form method="post" enctype="multipart/form-data">
             {% csrf_token %}
             {{ form.as_p }}

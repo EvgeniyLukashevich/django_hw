@@ -2,9 +2,10 @@
 
 {% block title %}PRODUCTS{% endblock %}
 
+{% block title2 %}СПИСОК ТОВАРОВ:{% endblock %}
+
 {% block content %}
 <section class="center">
-    <h2>Список товаров:</h2><br><br>
     {% for product in products %}
     <article>
         <h3>#{{ product.pk }} {{ product.name }}</h3>
@@ -12,7 +13,7 @@
         <h4>Цена: {{ product.price }} рублей</h4>
         <h4>Запас: {{ product.stock }} шт</h4>
         <h4>Описание: {{ product.description }}</h4>
-        <a href="{% url 'add_image' product.pk %}">Сменить/загрузить изображение</a><br><br>
+        <a class="default__link" href="{% url 'add_image' product.pk %}">Сменить/загрузить изображение</a><br><br>
         <br>
     </article>
     {% endfor %}

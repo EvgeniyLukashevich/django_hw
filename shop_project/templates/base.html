@@ -1,51 +1,44 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100;200;300;400;500;600;700&family=Lato:wght@300;400;700;900&family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0px;
-            padding: 0px;
-        }
-        body {
-            font-family: 'Geologica', sans-serif;
-            font-family: 'Lato', sans-serif;
-            font-family: 'Montserrat', sans-serif;
-        }
-        .center {
-            padding-left: calc(50% - 512px);
-            padding-right: calc(50% - 512px);
-        }
-        a {
-            text-decoration: none;
-        }
-  </style>
     <title>{% block title %}Django{% endblock %}</title>
 </head>
 
 <body>
     <br>
-    <header>
-        <nav class="center" style="display: flex; gap: 16px">
-            <a href="/">
-                <h6>MAIN</h6>
+    <header class="main__header">
+        <nav class="center menu__box">
+            <a class="menu__item" href="/">
+                <p>MAIN</p>
             </a>
-            <a href="/homework3">
-                <h6>SEMINAR3_HW</h6>
+            <a class="menu__item" href="/homework3">
+                <p>SEMINAR3_HW</p>
             </a>
-            <a href="/homework4">
-                <h6>SEMINAR4_HW</h6>
+            <a class="menu__item" href="/homework4">
+                <p>SEMINAR4_HW</p>
             </a>
         </nav>
     </header>
-    <br><br>
+
+
 
     <main>
-        {% block content %}Здесь будет наполнение{% endblock %}
+        <h2 class="center title2" >
+            {% block title2 %}Заголовок страницы{% endblock %}
+        </h2>
+
+        <div class="main__content">
+            {% block content %}Здесь будет наполнение{% endblock %}
+        </div>
     </main>
 
 </body>

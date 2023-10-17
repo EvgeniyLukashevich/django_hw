@@ -2,9 +2,10 @@
 
 {% block title %}ORDERS{% endblock %}
 
+{% block title2 %}СПИСОК ЗАКАЗОВ:{% endblock %}
+
 {% block content %}
 <section class="center">
-    <h2>Список заказов :</h2><br><br>
     {% for order in orders %}
     <h5>{{ order.client.name }}</h5>
     <article>

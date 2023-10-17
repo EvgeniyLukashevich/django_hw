@@ -1,0 +1,86 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: 'Geologica', sans-serif;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgba(228, 229, 224, 1);
+}
+
+.center {
+    padding-left: calc(50% - 512px);
+    padding-right: calc(50% - 512px);
+}
+
+.main__header {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 10vh;
+    background-color: rgba(64, 72, 74, 1);
+
+    
+}
+
+a {
+    text-decoration: none;
+}
+
+.menu__box {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu__item {
+    text-decoration: none;
+    color: rgba(228, 229, 224, 1);
+    font-weight: 300;
+    font-size: 20px;
+    transition: all .3s;
+}
+.menu__item:hover {
+    color: rgba(228, 229, 224, .7);
+}
+.menu__item:active {
+    scale: .9;
+}
+
+
+
+
+.title2 {
+    font-weight: 500;
+    margin-top: 12vh;
+    margin-bottom: 32px;
+}
+
+.default__link  {
+    text-decoration: none;
+    color: rgba(109, 48, 56, .99);
+    font-size: 16px;
+    font-weight: 600;
+    transition: all .3s;
+
+}
+.default__link:hover {
+    color: rgba(109, 48, 56, .8);
+}
+.default__link:active {
+    scale: .3;
+}
+
+.customers__area {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.customers__area article{
+    width: 33.33%;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}

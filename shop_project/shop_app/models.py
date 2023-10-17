@@ -14,7 +14,7 @@ class Product(models.Model):
     price = models.DecimalField(max_digits=8, decimal_places=2)
     stock = models.IntegerField()
     date_added = models.DateTimeField(auto_now_add=True)
-    img = models.ImageField(blank=True, upload_to='', default='default.jpg')
+    img = models.ImageField(blank=True, upload_to='', default='default.png')
 
 
 class Order(models.Model):
