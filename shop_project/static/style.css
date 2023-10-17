@@ -2,7 +2,6 @@
     margin: 0px;
     padding: 0px;
 }
-
 body {
     font-family: 'Geologica', sans-serif;
     font-family: 'Lato', sans-serif;
@@ -10,35 +9,46 @@ body {
     background-color: rgba(228, 229, 224, 1);
     padding-bottom: 64px;
 }
-
 .center {
     padding-left: calc(50% - 512px);
     padding-right: calc(50% - 512px);
 }
-
 .main__header {
     position: fixed;
     top: 0;
     width: 100vw;
     height: 10vh;
-    background-color: rgba(64, 72, 74, 1);
-
-    
+    background-color: rgba(38, 42, 41, 1);
+    display: flex;
 }
-
 a {
     text-decoration: none;
 }
-
+.nav__logo {
+    display: flex;
+    align-items: center;
+}
+.nav__logo p{
+    color: rgba(228, 229, 224, 1);
+    font-weight: 600;
+    font-size: 22px;
+    transition: all .3s;
+}
 .menu__box {
+    width: 70vw;
     height: 100%;
+    padding-left: 15vw;
+    padding-right: 15vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
 }
-
+.nav__menu {
+    display: flex;
+    gap: 64px;
+}
 .menu__item {
-    text-decoration: none;
     color: rgba(228, 229, 224, 1);
     font-weight: 300;
     font-size: 20px;
@@ -59,16 +69,17 @@ a {
     justify-content: flex-end;
     gap: 32px;
 }
-
-.content__header__link {
+.content__header__link p{
     text-decoration: none;
-    color: rgba(109, 48, 56, .99);
+    color: rgb(88, 104, 59);
     font-size: 16px;
     font-weight: 600;
     transition: all .3s;
 }
 
+
 .title2 {
+    color: rgba(38, 42, 41, 1);
     font-weight: 500;
     margin-bottom: 32px;
     margin-top: 48px;
@@ -77,7 +88,7 @@ a {
 
 .default__link p {
     text-decoration: none;
-    color: rgba(109, 48, 56, .99);
+    color: rgba(109, 48, 56, 1);
     font-size: 16px;
     font-weight: 600;
     transition: all .3s;
@@ -89,16 +100,56 @@ a {
     scale: .95;
 }
 
-.customers__area {
+
+.content__area {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 32px;
 }
-
-.customers__area article{
+.content__area .customers{
     width: 256px;
     padding: 16px;
     background-color: rgba(64, 72, 74, .3);
     box-shadow: 15px 25px 60px -5px rgba(64, 72, 74, .2);
+}
+.content__area .products{
+    width: 288px;
+    padding: 16px;
+    background-color: rgba(64, 72, 74, .3);
+    box-shadow: 15px 25px 60px -5px rgba(64, 72, 74, .2);
+}
+
+
+.item__title {
+    color: rgba(38, 42, 41, 1);
+    font-size: 20px;
+    font-weight: 700;
+}
+.item__paragraph {
+    color: rgba(75, 79, 78, 1);
+    font-size: 16px;
+    font-weight: 600;
+}
+.item__text {
+    color: rgba(75, 79, 78, 1);
+    font-size: 14px;
+    font-weight: 500;
+}
+.item__link p{
+    color: rgba(109, 48, 56, 1);
+    font-size: 16px;
+    font-weight: 600;
+    transition: all .3s;
+}
+.item__link:hover p{
+    color: rgba(109, 48, 56, .8);
+}
+.item__link:active p{
+    scale: .95;
+}
+.item__img{
+    width: 256px;
+    margin-top: 16px;
+    margin-bottom: 16px;
 }

@@ -4,24 +4,26 @@
 
 
 {% block content_header %}
-    <a class="content__header__link" href="#"><p>Добавить покупателя</p></a>
-    <a class="content__header__link" href="#"><p>Удалить покупателя</p></a>
+    <a class="content__header__link" href="#"><p>[+] Добавить покупателя</p></a>
 {% endblock %}
 
 {% block title2 %}СПИСОК ПОКУПАТЕЛЕЙ:{% endblock %}
 
 
 {% block content %}
-<section class="center customers__area">
+<section class="center content__area">
     {% for customer in customers %}
-    <article>
-        <h3>#{{ customer.pk }} {{ customer.name }}</h3>
-        <h5>{{ customer.email }}</h5>
-        <h5>age: {{ customer.age }}</h5><br>
+    <article class="customers">
+        <p class="item__title">#{{ customer.pk }} {{ customer.name }}</p>
+        <p class="item__paragraph">{{ customer.email }}</p>
+        <p class="item__paragraph">age: {{ customer.age }}</p><br>
         
-        <a class="default__link" href="{% url 'week_orders' customer.pk %}"><p>Заказы за неделю</p></a>
-        <a class="default__link" href="{% url 'month_orders' customer.pk %}"><p>Заказы за месяц</p></a>
-        <a class="default__link" href="{% url 'year_orders' customer.pk %}"><p>Заказы за год</p></a>
+        <a class="item__link" href="{% url 'week_orders' customer.pk %}"><p>Заказы за неделю</p></a>
+        <a class="item__link" href="{% url 'month_orders' customer.pk %}"><p>Заказы за месяц</p></a>
+        <a class="item__link" href="{% url 'year_orders' customer.pk %}"><p>Заказы за год</p></a>
+        <br>
+        <a class="item__link" href="#"><p>Изменить</p></a>
+        <a class="item__link" href="#"><p>Удалить</p></a>
     </article>
     {% endfor %}
 </section>

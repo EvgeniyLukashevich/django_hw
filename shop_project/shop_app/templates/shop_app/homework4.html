@@ -2,19 +2,26 @@
 
 {% block title %}PRODUCTS{% endblock %}
 
+{% block content_header %}
+    <a class="content__header__link" href="#"><p>[+] Добавить товар</p></a>
+{% endblock %}
+
 {% block title2 %}СПИСОК ТОВАРОВ:{% endblock %}
 
 {% block content %}
-<section class="center">
+<section class="center content__area">
     {% for product in products %}
-    <article>
-        <h3>#{{ product.pk }} {{ product.name }}</h3>
-        <img src="{{ product.img.url }}" alt="{{ product.name }} image">
-        <h4>Цена: {{ product.price }} рублей</h4>
-        <h4>Запас: {{ product.stock }} шт</h4>
-        <h4>Описание: {{ product.description }}</h4>
-        <a class="default__link" href="{% url 'add_image' product.pk %}">Сменить/загрузить изображение</a><br><br>
-        <br>
+    <article class="products">
+        <p class="item__title">#{{ product.pk }} {{ product.name }}</p>
+        <p class="item__paragraph">Запас: {{ product.stock }} шт</p>
+        <p class="item__paragraph">{{ product.price }} рублей</p>
+        <img class="item__img" src="{{ product.img.url }}" alt="{{ product.name }} image">
+        
+        <p class="item__text">{{ product.description }}</p><br>
+        
+        <a class="item__link" href="{% url 'add_image' product.pk %}"><p>Загрузить изображение</p></a>
+        <a class="item__link" href="#"><p>Изменить товар</p></a>
+        <a class="item__link" href="#"><p>Удалить товар</p></a>
     </article>
     {% endfor %}
 </section>
