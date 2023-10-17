@@ -53,7 +53,8 @@ a {
 
 
 .content__header__box {
-    margin-top: 12vh;
+    margin-top: 8vh;
+    padding-top: 16px;
     display: flex;
     justify-content: flex-end;
     gap: 32px;
@@ -69,8 +70,8 @@ a {
 
 .title2 {
     font-weight: 500;
-    margin-top: 2vh;
     margin-bottom: 32px;
+    margin-top: 48px;
 }
 
 
