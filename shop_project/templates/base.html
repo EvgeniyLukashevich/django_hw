@@ -18,13 +18,13 @@
     <header class="main__header">
         <nav class="center menu__box">
             <a class="menu__item" href="/">
-                <p>MAIN</p>
+                <p>ГЛАВНАЯ</p>
             </a>
             <a class="menu__item" href="/homework3">
-                <p>SEMINAR3_HW</p>
+                <p>ПОКУПАТЕЛИ</p>
             </a>
             <a class="menu__item" href="/homework4">
-                <p>SEMINAR4_HW</p>
+                <p>ТОВАРЫ</p>
             </a>
         </nav>
     </header>
@@ -32,6 +32,10 @@
 
 
     <main>
+        <header class="center content__header__box">
+        {% block content_header %} # # # # # # #{% endblock %}
+        </header>
+
         <h2 class="center title2" >
             {% block title2 %}Заголовок страницы{% endblock %}
         </h2>

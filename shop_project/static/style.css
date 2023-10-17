@@ -8,6 +8,7 @@ body {
     font-family: 'Lato', sans-serif;
     font-family: 'Montserrat', sans-serif;
     background-color: rgba(228, 229, 224, 1);
+    padding-bottom: 64px;
 }
 
 .center {
@@ -51,36 +52,52 @@ a {
 }
 
 
-
-
-.title2 {
-    font-weight: 500;
+.content__header__box {
     margin-top: 12vh;
-    margin-bottom: 32px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 32px;
 }
 
-.default__link  {
+.content__header__link {
     text-decoration: none;
     color: rgba(109, 48, 56, .99);
     font-size: 16px;
     font-weight: 600;
     transition: all .3s;
-
 }
-.default__link:hover {
+
+.title2 {
+    font-weight: 500;
+    margin-top: 2vh;
+    margin-bottom: 32px;
+}
+
+
+.default__link p {
+    text-decoration: none;
+    color: rgba(109, 48, 56, .99);
+    font-size: 16px;
+    font-weight: 600;
+    transition: all .3s;
+}
+.default__link:hover p{
     color: rgba(109, 48, 56, .8);
 }
-.default__link:active {
-    scale: .3;
+.default__link:active p{
+    scale: .95;
 }
 
 .customers__area {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
 }
 
 .customers__area article{
-    width: 33.33%;
-    margin-top: 16px;
-    margin-bottom: 16px;
+    width: 256px;
+    padding: 16px;
+    background-color: rgba(64, 72, 74, .3);
+    box-shadow: 15px 25px 60px -5px rgba(64, 72, 74, .2);
 }

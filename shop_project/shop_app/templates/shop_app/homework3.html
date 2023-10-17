@@ -3,7 +3,12 @@
 {% block title %}CUSTOMERS{% endblock %}
 
 
-{% block title2 %}СПИСОК ПОЛЬЗОВАТЕЛЕЙ:{% endblock %}
+{% block content_header %}
+    <a class="content__header__link" href="#"><p>Добавить покупателя</p></a>
+    <a class="content__header__link" href="#"><p>Удалить покупателя</p></a>
+{% endblock %}
+
+{% block title2 %}СПИСОК ПОКУПАТЕЛЕЙ:{% endblock %}
 
 
 {% block content %}
@@ -11,12 +16,12 @@
     {% for customer in customers %}
     <article>
         <h3>#{{ customer.pk }} {{ customer.name }}</h3>
-        <h4>Age: {{ customer.age }}</h4>
-        <h4>E-mail: {{ customer.email }}</h4>
-        <a class="default__link" href="{% url 'week_orders' customer.pk %}">Заказы за неделю</a><br>
-        <a class="default__link" href="{% url 'month_orders' customer.pk %}">Заказы за месяц</a><br>
-        <a class="default__link" href="{% url 'year_orders' customer.pk %}">Заказы за год</a><br>
-        <br>
+        <h5>{{ customer.email }}</h5>
+        <h5>age: {{ customer.age }}</h5><br>
+        
+        <a class="default__link" href="{% url 'week_orders' customer.pk %}"><p>Заказы за неделю</p></a>
+        <a class="default__link" href="{% url 'month_orders' customer.pk %}"><p>Заказы за месяц</p></a>
+        <a class="default__link" href="{% url 'year_orders' customer.pk %}"><p>Заказы за год</p></a>
     </article>
     {% endfor %}
 </section>
