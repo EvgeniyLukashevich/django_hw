@@ -71,7 +71,7 @@ a {
 }
 .content__header__link p{
     text-decoration: none;
-    color: rgb(88, 104, 59);
+    color: rgba(88, 104, 59, 1);
     font-size: 16px;
     font-weight: 600;
     transition: all .3s;
@@ -162,4 +162,44 @@ a {
 .item__command{
     font-weight: 600;
     color: rgb(88, 104, 59);
+}
+
+
+.upload__form{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+.upload__form p {
+    color: rgba(38, 42, 41, 1);
+}
+.upload__form #id_image{
+    background-color: rgba(109, 48, 56, 1);
+    font-size: 16px;
+    color: rgba(228, 229, 224, 1);
+    display: flex;
+    width: 288px;
+}
+.upload__button{
+    background-color: rgba(228, 229, 224, 1);
+    border: 3px solid rgba(88, 104, 59, 1);
+    padding: 10px 20px;
+    text-align: center;
+    width: 288px;
+    transition: all .3s;
+}
+.upload__button p{
+    color: rgba(88, 104, 59, 1);
+    font-size: 24px;
+    font-weight: 500;
+}
+.upload__button:hover{
+    background-color: rgba(88, 104, 59, 1);
+}
+.upload__button:hover p{
+    color: rgba(228, 229, 224, 1);
+    font-weight: 500;
+}
+.upload__button:active{
+    scale: .9;
 }

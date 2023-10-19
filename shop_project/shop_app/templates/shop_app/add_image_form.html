@@ -2,14 +2,18 @@
 
 {% block title %}ADD IMAGE{% endblock %}
 
+{% block content_header %}
+    <a class="content__header__link" href="/admin/"><p>Административная панель</p></a>
+{% endblock %}
+
 {% block title2 %}ЗАГРУЗИТЕ ИЗОБРАЖЕНИЕ{% endblock %}
 
 {% block content %}
 <section class="center">
-        <form method="post" enctype="multipart/form-data">
+        <form class="upload__form" method="post" enctype="multipart/form-data">
             {% csrf_token %}
             {{ form.as_p }}
-            <button type="submit">ЗАГРУЗИТЬ</button>
+            <button type="submit" class="upload__button"><p>ЗАГРУЗИТЬ</p></button>
         </form>
 </section>
 

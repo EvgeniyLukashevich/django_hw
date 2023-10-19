@@ -3,7 +3,7 @@
 {% block title %}PRODUCTS{% endblock %}
 
 {% block content_header %}
-    <a class="content__header__link" href="#"><p>[+] Добавить товар</p></a>
+    <a class="content__header__link" href="/admin/"><p>[+] Добавить товар</p></a>
 {% endblock %}
 
 {% block title2 %}СПИСОК ТОВАРОВ:{% endblock %}
@@ -20,8 +20,8 @@
         <p class="item__text">{{ product.description }}</p><br>
         
         <a class="item__link" href="{% url 'add_image' product.pk %}"><p>Загрузить изображение</p></a>
-        <a class="item__link" href="#"><p>Изменить товар</p></a>
-        <a class="item__link" href="#"><p>Удалить товар</p></a>
+        <a class="item__link" href="/admin/"><p>Изменить товар</p></a>
+        <a class="item__link" href="/admin/"><p>Удалить товар</p></a>
     </article>
     {% endfor %}
 </section>
