@@ -12,7 +12,7 @@ class Product(models.Model):
     name = models.CharField(max_length=64)
     description = models.TextField()
     price = models.DecimalField(max_digits=8, decimal_places=2)
-    stock = models.IntegerField()
+    stock = models.PositiveSmallIntegerField()
     date_added = models.DateTimeField(auto_now_add=True)
     img = models.ImageField(blank=True, upload_to='', default='default_product_img.png')
 
@@ -36,4 +36,4 @@ class Order(models.Model):
 class OrderItem(models.Model):
     order = models.ForeignKey(Order, on_delete=models.CASCADE, related_name='order_items')
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
-    quantity = models.IntegerField(default=1)
+    quantity = models.PositiveSmallIntegerField(default=1)

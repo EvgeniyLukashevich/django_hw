@@ -119,6 +119,12 @@ a {
     background-color: rgba(64, 72, 74, .3);
     box-shadow: 15px 25px 60px -5px rgba(64, 72, 74, .2);
 }
+.content__area .tasks{
+    width: 320px;
+    padding: 16px;
+    background-color: rgba(64, 72, 74, .3);
+    box-shadow: 15px 25px 60px -5px rgba(64, 72, 74, .2);
+}
 
 
 .item__title {
